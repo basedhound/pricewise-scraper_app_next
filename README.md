@@ -1,37 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <a href="https://pricewise-fv.vercel.app" target="_blank">
+      <img src="public/design/preview.webp" alt="Project Banner">
+    </a>
+  <h3 align="center">Ecommerce Price Tracking</h3>
+</div>
 
-## Getting Started
+##  <br /> 📋 <a name="table">Table of Contents</a>
 
-First, run the development server:
+- ✨ [Introduction](#introduction)
+- ⚙️ [Tech Stack](#tech-stack)
+- 📝 [Features](#features)
+- 🚀 [Quick Start](#quick-start)
+
+##  <br /> <a name="introduction">✨ Introduction</a>
+
+**[EN]** Developed using Next.js and Bright Data's webunlocker, this e-commerce product scraping site is designed to assist users in making informed decisions. It notifies users when a product drops in price and helps competitors by alerting them when the product is out of stock, all managed through cron jobs.
+
+**[FR]** Développé avec Next.js et le webunlocker de Bright Data, ce site de scraping de produits e-commerce est conçu pour aider les utilisateurs à prendre des décisions éclairées. Il informe les utilisateurs lorsque le prix d'un produit baisse et aide les concurrents en les alertant lorsque le produit est en rupture de stock, le tout géré à travers des tâches cron.
+
+##  <br /> <a name="tech-stack">⚙️ Tech Stack</a>
+
+- **React** is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes over time. React's component-based architecture allows developers to create reusable UI components, making development more efficient and the codebase easier to maintain. Its virtual DOM enhances performance by minimizing direct interactions with the browser's DOM.
+
+- **Next.js** is a React framework known for its server-side rendering (SSR) and static site generation (SSG) capabilities, enhancing performance and SEO for web applications. It offers features like automatic code splitting, API routes for server-side logic, and a plugin system for extensibility.
+
+- **MongoDB** is a NoSQL database system known for its flexibility and scalability, ideal for handling large volumes of unstructured or semi-structured data. It stores data in JSON-like documents, making it easy to integrate with modern applications. MongoDB's features include powerful querying capabilities, automatic sharding for horizontal scaling, flexible data models, and support for distributed transactions in recent versions.
+
+- **Bright Data** is a comprehensive platform that facilitates web data collection and management through its proxy networks and robust data extraction capabilities. It enables users to gather data at scale while ensuring anonymity and compliance with web scraping policies.
+
+- **Cheerio** is a lightweight and fast HTML parser designed for server-side scraping in Node.js. It provides a jQuery-like API to manipulate and traverse HTML/XML documents, making it ideal for extracting specific data from web pages efficiently.
+
+- **Nodemailer** is a Node.js module used for sending emails from applications. It supports various email transport methods (SMTP, sendmail, etc.) and allows for the inclusion of HTML content, attachments, and other email features, making it versatile for handling email communications in Node.js projects.
+
+- **Headless UI** is a collection of fully accessible, unstyled UI components designed to work seamlessly with Tailwind CSS. It provides essential building blocks for creating custom user interfaces while ensuring accessibility standards are met, offering a flexible and integrative approach to UI development.
+
+- **TypeScript** is a statically typed superset of JavaScript that allows for early detection of errors and more robust, maintainable code. TypeScript's type system helps developers catch mistakes early during the development process, ensuring a more stable and reliable application.
+
+- **Tailwind** is a utility-first CSS framework that speeds up UI development by providing a set of pre-built utility classes. It allows developers to quickly build custom designs without writing traditional CSS, promoting rapid prototyping and design consistency.
+
+
+
+## <br/> <a name="features">📝 Features</a>
+
+👉 **Header with Carousel**: Visually appealing header with a carousel showcasing key features and benefits
+
+👉 **Product Scraping**: A search bar allowing users to input Amazon product links for scraping.
+
+👉 **Scraped Projects**: Displays the details of products scraped so far, offering insights into tracked items.
+
+👉 **Scraped Product Details**: Showcase the product image, title, pricing, details, and other relevant information scraped from the original website
+
+👉 **Track Option**: Modal for users to provide email addresses and opt-in for tracking.
+
+👉 **Email Notifications**: Send emails product alert emails for various scenarios, e.g., back in stock alerts or lowest price notifications.
+
+👉 **Automated Cron Jobs**: Utilize cron jobs to automate periodic scraping, ensuring data is up-to-date.
+
+
+## <br /> <a name="quick-start">🚀 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+<br/>**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+<br/>**Cloning the Repository**
+
+```bash
+git clone {git remote URL}
+```
+
+<br/>**Installation**
+
+Let's install the project dependencies, from your terminal, run:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+<br/>**Set Up Environment Variables**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+# Bright Data
+BRIGHT_DATA_USERNAME=
+BRIGHT_DATA_PASSWORD=
+
+# MongoDB
+MONGODB_URI=
+
+# Nodemailer
+EMAIL_PASSWORD=
+```
+
+Replace the placeholder values with your actual respective account credentials:
+
+- [Bright Data](https://brightdata.com/)
+- [MongoDB](https://cloud.mongodb.com)
+
+
+<br/>**Running the Project**
+
+Installation will take a minute or two, but once that's done, you should be able to run the following command:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# pricewise-scraper_app_next
+Open [`http://localhost:3000`](http://localhost:3000) in your browser to view the project.
