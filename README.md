@@ -105,6 +105,7 @@ Replace the placeholder values with your actual respective account credentials:
 
 - [Bright Data](https://brightdata.com/)
 - [MongoDB](https://cloud.mongodb.com)
+- Note: Disabled my BrightData zone for Pricewise
 
 
 <br/>**Running the Project**
